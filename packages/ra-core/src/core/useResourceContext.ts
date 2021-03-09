@@ -11,10 +11,7 @@ import { ResourceContext, ResourceContextValue } from './ResourceContext';
  *
  * const ResourceName = (props) => {
  *   const { resource } = useResourceContext(props);
- *   const resourceName = translate(`resources.${resource}.name`, {
- *      smart_count: 1,
- *      _: inflection.humanize(inflection.singularize(resource)),
- *   });
+ *   const resourceName = useResourceLabel(resource, false);
  *   return <>{resourceName}</>;
  * }
  *
